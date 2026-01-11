@@ -1,8 +1,6 @@
 -- DESKRIPSI SINGKAT --
 
-Aplikasi ini menerapkan konsep CRUD (Create, Read, Update/Search, Delete) dan prinsip Object-Oriented Programming (OOP) secara menyeluruh.
-First Auto Factory adalah aplikasi manajemen showroom dan pabrik mobil berbasis Desktop (Java Swing).
-Aplikasi ini dirancang untuk mensimulasikan proses produksi mobil, penyimpanan inventaris, pencarian, penjualan, hingga penyimpanan data ke dalam file eksternal. Aplikasi ini dilengkapi dengan GUI menggunakan Javaswing untuk memberikan tampilan yang simpel dan minimalis sehingga mempermudah user dalam mengoperasikannya.
+Pada project ini, kami membuat sebuah program aplikasi game simulasi pabrik dan showroom mobil. Aplikasi ini dirancang untuk mensimulasikan proses produksi mobil, penyimpanan inventaris mobil, pencarian, penjualan, hingga penyimpanan data ke dalam file eksternal. Aplikasi ini dilengkapi dengan GUI menggunakan Javaswing untuk memberikan tampilan yang simpel dan minimalis sehingga mempermudah user dalam mengoperasikannya. Aplikasi ini menggunakan konsep OOP encapsulation, inheritance, polymorphism, dan abstraction.
 
 -- FITUR -- 
 1. Create Car: Memproduksi dan menambah mobil baru dengan memilih pilihan tipe mobil (Sedan, SUV, Hatchback) dan memberi nama mobil. Setiap mobil akan mendapat hp, warna, VIN, dan plat nomor yang ditentukan secara otomatis dan acak dengan fitur math.random di Java.  
@@ -42,25 +40,34 @@ MainMenu.java: Entry point aplikasi dan menampilkan dashboard utama berisi navig
 
 3. Package showroom.ui.dialogs (Popup Jendela)
 
-Class: 
+Class:
+
 CreateCarDialog.java: Form input untuk membuat mobil baru dengan validasi dan custom toggle button.
+
 ShowCarDialog.java: Menampilkan tabel daftar mobil yang ada di inventaris.
+
 SearchCarDialog.java: Fitur pencarian mobil menggunakan Java Stream API (filter by name).
+
 SellCarDialog.java: Menampilkan tabel untuk memilih dan menghapus mobil berdasarkan VIN.
 
 4. Package showroom.ui.components (Desain Custom)
 
-Class: 
-BackgroundPanel.java: Panel dengan algoritma Radial Gradient untuk background efek "Glow" tanpa gambar eksternal.
-RoundedPanel.java: Panel transparan dengan sudut membulat untuk wadah menu utama.
+Class:
+
+BackgroundPanel.java: Panel dengan tampilan Radial Gradient untuk background efek "Glow" tanpa gambar eksternal.
+
+RoundedPanel.java: Panel transparan dengan sudut membulat sebagai wadah menu utama.
 
 5. Package showroom.utils (Utilitas)
 
-Class: 
+Class:
+
 AppTheme.java: Pusat konfigurasi warna (Palet Dark Mode, Cyan Accent) dan Font agar desain konsisten.
+
 FileManager.java: Menangani operasi File I/O dengan menyimpan ArrayList ke file .txt.
 
 -- PENJELASAN KONSEP OOP --
+
 1. Encapsulation
   
 Seluruh atribut data pada class Car bersifat private untuk melindungi data dari akses langsung yang tidak sah. Data hanya dapat diakses atau diubah melalui method public (Getter).
