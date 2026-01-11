@@ -14,6 +14,7 @@ Aplikasi ini dirancang untuk mensimulasikan proses produksi mobil, penyimpanan i
 -- CARA MENJALANKAN --
 
 Prasyarat:
+
 a. Pastikan komputer sudah terinstall Java Development Kit (JDK) minimal versi 8.
 
 b. Disarankan menggunakan IDE seperti Eclipse, IntelliJ IDEA, atau VS Code.
@@ -29,19 +30,23 @@ Setelah melakukan penyimpanan data (tombol Save), file cars.txt akan otomatis mu
 -- DAFTAR CLASS DAN FUNGSINYA --
 
 1. Package showroom.models (Data Logic)
+   
 Car.java: Abstract Class induk yang mendefinisikan atribut dasar mobil (nama, hp, vin, kapasitas).
 SUV.java, Sedan.java, Hatchback.java: Sub-class yang mewarisi Car dengan spesifikasi default masing-masing.
 
-2. Package showroom.ui (Tampilan Utama)
+3. Package showroom.ui (Tampilan Utama)
+   
 MainMenu.java: Entry point aplikasi. Menampilkan dashboard utama berisi navigasi tombol menu.
 
-3. Package showroom.ui.dialogs (Popup Jendela)
+4. Package showroom.ui.dialogs (Popup Jendela)
+   
 CreateCarDialog.java: Form input untuk membuat mobil baru dengan validasi dan custom toggle button.
 ShowCarDialog.java: Menampilkan tabel daftar mobil yang ada di inventaris.
 SearchCarDialog.java: Fitur pencarian mobil menggunakan Java Stream API (filter by name).
 SellCarDialog.java: Menampilkan tabel untuk memilih dan menghapus mobil berdasarkan VIN.
 
 4. Package showroom.ui.components (Desain Custom)
+   
 BackgroundPanel.java: Panel dengan algoritma Radial Gradient untuk background efek "Glow" tanpa gambar eksternal.
 RoundedPanel.java: Panel transparan dengan sudut membulat untuk wadah menu utama.
 
@@ -50,20 +55,24 @@ AppTheme.java: Pusat konfigurasi warna (Palet Dark Mode, Cyan Accent) dan Font a
 FileManager.java: Menangani operasi File I/O (menyimpan ArrayList ke file .txt).
 
 -- PENJELASAN KONSEP OOP --
-1. Encapsulation 
+1. Encapsulation
+   
 Seluruh atribut data pada class Car bersifat private untuk melindungi data dari akses langsung yang tidak sah. Data hanya dapat diakses atau diubah melalui method public (Getter).
 Contohnya private String vin; diakses melalui public String getVin().
 
-2. Inheritance 
+2. Inheritance
+   
 Mencegah duplikasi kode dengan mewariskan sifat umum.
 Implementasinya adalah pada Class SUV, Sedan, dan Hatchback menggunakan kata kunci extends Car. Mereka otomatis memiliki atribut nama, hp, dan vin tanpa perlu menuliskannya ulang.
 
-3. Polymorphism 
+3. Polymorphism
+   
 Kemampuan objek untuk memiliki banyak bentuk.
 Implementasinya adalah menggunakan koleksi ArrayList<Car>. List ini bertipe induk (Car), namun dapat menyimpan berbagai bentuk objek anak (new SUV(), new Sedan()).
 Saat method c.getType() dipanggil, hasilnya akan berbeda tergantung objek aslinya.
 
-4. Abstraction 
+4. Abstraction
+   
 Menyembunyikan detail implementasi yang kompleks dan hanya menampilkan kerangka kerjanya.
 Implementasinya adalah pada Class Car dideklarasikan sebagai public abstract class. Kita tidak bisa membuat objek new Car() secara langsung, melainkan harus membuat objek yang spesifik.
 Ini memastikan setiap mobil di pabrik pasti memiliki tipe yang jelas.
