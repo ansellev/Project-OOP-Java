@@ -1,4 +1,5 @@
--- DESKRIPSI SINGKAT -- 
+-- DESKRIPSI SINGKAT --
+
 Aplikasi ini menerapkan konsep CRUD (Create, Read, Update/Search, Delete) dan prinsip Object-Oriented Programming (OOP) secara menyeluruh.
 First Auto Factory adalah aplikasi manajemen showroom dan pabrik mobil berbasis Desktop (Java Swing).
 Aplikasi ini dirancang untuk mensimulasikan proses produksi mobil, penyimpanan inventaris, pencarian, penjualan, hingga penyimpanan data ke dalam file eksternal dengan antarmuka Dark Mode yang modern.
@@ -10,9 +11,11 @@ Aplikasi ini dirancang untuk mensimulasikan proses produksi mobil, penyimpanan i
 4. Sell Car: Menghapus data mobil (simulasi penjualan) berdasarkan VIN unik.
 5. Save Data: Menyimpan seluruh data inventaris ke file teks (cars.txt) agar data tidak hilang.
 
--- CARA MENJALANKAN -- 
-* Prasyarat:
+-- CARA MENJALANKAN --
+
+Prasyarat:
 a. Pastikan komputer sudah terinstall Java Development Kit (JDK) minimal versi 8.
+
 b. Disarankan menggunakan IDE seperti Eclipse, IntelliJ IDEA, atau VS Code.
 
 Langkah-Langkah:
